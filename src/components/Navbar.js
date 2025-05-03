@@ -17,7 +17,7 @@ function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <img src="/logo.png" alt="Logo" className="h-10 w-10" />
+              <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" className="h-10 w-10" />
               <span className="text-2xl font-bold text-teal-600">Dr. Bogdan Balaci</span>
             </div>
           </div>
