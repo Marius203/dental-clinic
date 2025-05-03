@@ -11,8 +11,9 @@ function ContactInformation() {
             Str. Alexandru Ioan Cuza nr 26, Scara 3, Parter <br />
             Târgu Jiu, Romania
             </p>
-            <a href="#directions" className="inline-block bg-teal-600 text-white font-medium py-2 px-4 rounded-md hover:bg-teal-700 transition duration-300">Indicații rutiere</a>
           </div>
+
+          <br />
           
           <h3 className="text-xl font-bold text-teal-700 mb-4">Program</h3>
           <p className="text-gray-700 mb-1">Luni–Joi: 8:00–17:00</p>
