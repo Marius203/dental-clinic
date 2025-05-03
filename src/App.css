@@ -1,3 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+}
+
+main {
+  padding-top: 4rem; /* Space for the fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6, button, a {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* If focus states are not visible by default with Tailwind */
+:focus {
+  outline: 2px solid rgba(20, 184, 166, 0.5);
+}
+
+/* Scrollbar styling for browsers that support it */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14b8a6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0f9488;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Nunito', sans-serif;
+}
+
 .App {
   text-align: center;
 }
