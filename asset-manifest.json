@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dental-clinic/static/css/main.0065630d.css",
-    "main.js": "/dental-clinic/static/js/main.0fae8483.js",
+    "main.js": "/dental-clinic/static/js/main.f5e02cfa.js",
     "index.html": "/dental-clinic/index.html",
     "main.0065630d.css.map": "/dental-clinic/static/css/main.0065630d.css.map",
-    "main.0fae8483.js.map": "/dental-clinic/static/js/main.0fae8483.js.map"
+    "main.f5e02cfa.js.map": "/dental-clinic/static/js/main.f5e02cfa.js.map"
   },
   "entrypoints": [
     "static/css/main.0065630d.css",
-    "static/js/main.0fae8483.js"
+    "static/js/main.f5e02cfa.js"
   ]
 }
