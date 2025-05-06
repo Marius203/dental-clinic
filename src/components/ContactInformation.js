@@ -16,8 +16,11 @@ function ContactInformation() {
           <br />
           
           <h3 className="text-xl font-bold text-teal-700 mb-4">Program</h3>
-          <p className="text-gray-700 mb-1">Luni–Joi: 8:00–17:00</p>
-          <p className="text-gray-700 mb-1">Vineri: 8:00–15:00</p>
+          <p className="text-gray-700 mb-1">Luni: 12:00–20:00</p>
+          <p className="text-gray-700 mb-1">Marti: 8:00–16:00</p>
+          <p className="text-gray-700 mb-1">Miercuri: 12:00–20:00</p>
+          <p className="text-gray-700 mb-1">Joi: 8:00–16:00</p>
+          <p className="text-gray-700 mb-1">Vineri: 12:00–20:00</p>
           <p className="text-gray-700 mb-6">Sâmbătă–Duminică: Închis</p>
           
           <h3 className="text-xl font-bold text-teal-700 mb-4">Contact</h3>
