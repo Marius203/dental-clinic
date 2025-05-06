@@ -5,20 +5,22 @@ function ContactInformation() {
     <div className="bg-white rounded-lg shadow-xl p-8 mb-12">
       <div className="grid md:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-3xl font-bold text-teal-700 mb-6">Vizitați-ne</h2>
-          <p className="text-gray-700 mb-4">Suntem convenabil localizați în inima orașului. Ne găsiți în clădirea Dental Plaza cu parcare gratuită disponibilă.</p>
-          
-          <div className="mb-8">
+          <h2 className="text-3xl font-bold text-teal-700 mb-6">Vizitați-ne</h2>          
+          <div>
             <p className="text-lg font-medium text-gray-800 mb-2">
             Str. Alexandru Ioan Cuza nr 26, Scara 3, Parter <br />
             Târgu Jiu, Romania
             </p>
-            <a href="#directions" className="inline-block bg-teal-600 text-white font-medium py-2 px-4 rounded-md hover:bg-teal-700 transition duration-300 mt-2">Indicații rutiere</a>
           </div>
+
+          <br />
           
           <h3 className="text-xl font-bold text-teal-700 mb-4">Program</h3>
-          <p className="text-gray-700 mb-1">Luni–Joi: 8:00–17:00</p>
-          <p className="text-gray-700 mb-1">Vineri: 8:00–15:00</p>
+          <p className="text-gray-700 mb-1">Luni: 12:00–20:00</p>
+          <p className="text-gray-700 mb-1">Marti: 8:00–16:00</p>
+          <p className="text-gray-700 mb-1">Miercuri: 12:00–20:00</p>
+          <p className="text-gray-700 mb-1">Joi: 8:00–16:00</p>
+          <p className="text-gray-700 mb-1">Vineri: 12:00–20:00</p>
           <p className="text-gray-700 mb-6">Sâmbătă–Duminică: Închis</p>
           
           <h3 className="text-xl font-bold text-teal-700 mb-4">Contact</h3>
