@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -17,7 +20,9 @@ function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" className="h-10 w-10" />
+              <Link to="/">
+                <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" className="h-10 w-10" />
+              </Link>
               <span className="text-2xl font-bold text-teal-600">Dr. Bogdan Balaci</span>
             </div>
           </div>
@@ -25,11 +30,18 @@ function Navbar() {
           {/* Desktop menu */}
           <div className="hidden md:flex items-center">
             <div className="ml-10 flex items-baseline space-x-4">
-              <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Home</button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Despre noi</button>
-              <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Servicii</button>
-              <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Recenzii</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Contact</button>
+              {isHomePage ? (
+                <>
+                  <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Home</button>
+                  <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Despre noi</button>
+                  <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Servicii</button>
+                  <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Recenzii</button>
+                  <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Contact</button>
+                </>
+              ) : (
+                <Link to="/" className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Înapoi la pagina principală</Link>
+              )}
+              <Link to="/proceduri" className="text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Proceduri anterioare</Link>
             </div>
           </div>
           
@@ -55,11 +67,18 @@ function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            <button onClick={() => scrollToSection('home')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Home</button>
-            <button onClick={() => scrollToSection('about')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Despre noi</button>
-            <button onClick={() => scrollToSection('services')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Servicii</button>
-            <button onClick={() => scrollToSection('testimonials')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Recenzii</button>
-            <button onClick={() => scrollToSection('contact')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Contact</button>
+            {isHomePage ? (
+              <>
+                <button onClick={() => scrollToSection('home')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Home</button>
+                <button onClick={() => scrollToSection('about')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Despre noi</button>
+                <button onClick={() => scrollToSection('services')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Servicii</button>
+                <button onClick={() => scrollToSection('testimonials')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Recenzii</button>
+                <button onClick={() => scrollToSection('contact')} className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Contact</button>
+              </>
+            ) : (
+              <Link to="/" className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Înapoi la pagina principală</Link>
+            )}
+            <Link to="/proceduri" className="block text-gray-600 hover:text-teal-600 px-3 py-2 rounded-md text-base font-medium w-full text-left">Proceduri anterioare</Link>
           </div>
         </div>
       )}

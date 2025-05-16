@@ -39,7 +39,7 @@ function About() {
           <div className="md:w-1/2">
             <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" 
+                src={`${process.env.PUBLIC_URL}/images/11zon_resized.jpeg`} 
                 alt="Echipa noastră" 
                 className="w-full h-full object-cover object-center"
               />
